@@ -1,3 +1,11 @@
+/**
+ * @file basic.cpp
+ *
+ * @brief this file contains area calculation
+ *
+ * @author J112358ps
+ *
+ */
 #include <iostream>
 
 int main(){
