@@ -16,10 +16,6 @@ int screen()
     {
         cin>>array[i];
         cout<<array[i]<<"  ";
-       if (i>=10)
-            {
-               break ;
-            }
     }
     cout<<endl;
 }
