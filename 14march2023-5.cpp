@@ -1,5 +1,5 @@
 /**
- * @file 14march2023-1.cpp
+ * @file 14march2023-5.cpp
  *
  * @brief addition and multiplication in array.
 
