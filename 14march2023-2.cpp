@@ -1,5 +1,5 @@
 /**
- * @file 14march2023-1.cpp
+ * @file 14march2023-2.cpp
  *
  * @brief In taken 10 numbers checking wheather the new input number exists or not.
 
