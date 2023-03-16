@@ -11,7 +11,7 @@
 using namespace std;
 int main()
 {
-    int num[10];
+    int num[10],x=0;
     for(int i=0;i<10;i++)
     {
         cout << "Enter a number\n";
@@ -27,9 +27,11 @@ int main()
                 cout <<" exists\n";
                 break ;
             }
-            else {
-                cout<<"try again\n";
-                }
+           x++;
+        }
+        if(x==10)
+        {
+            cout<<"try again\n";
         }
         
     return 0;
