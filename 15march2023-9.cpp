@@ -31,7 +31,7 @@ int store()
         cout<<x[i]<<"   ";
     }cout<<"\n";
     cout<<"splitted array 2 is \n";
-    for (int i = a,j=0; i < c&&j<a; i++,j++)
+    for (int i = a,j=0; i < c&&j<b; i++,j++)
     {
         y[j]= z[i];
         cout<<y[j]<<"   ";
