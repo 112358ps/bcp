@@ -18,7 +18,7 @@ int array(){
     int evennum=0;
     for(int i=0;i<20;i++)
     {
-        cout<<"enter any 20 elements\n";
+        cout<<"enter any 20 numbers\n";
         cin>>r[i];
         if(r[i]>0){
             positivenum++;
