@@ -10,11 +10,14 @@ using namespace std;
 int table(int x)
 {
     int a=1;
-    for (int i = 1; i <= 10; i++)
+   
+    int a;
+    if(y != 1)
     {
-        a=x*i;
-        cout<<x<<" * "<<i<<" = "<<a<<"\n";
-    }    
+        table(x,y-1);
+        a=x*y;
+        cout<<x<<" * "<<y<<" = "<<a<<"\n";
+    } 
     
     return a;
 }
