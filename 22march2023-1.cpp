@@ -7,7 +7,7 @@
  */
 #include<iostream>
 using namespace std;
-int table(int x)
+int table(int x,int y)
 {
     int a=1;
    
@@ -27,7 +27,7 @@ int main()
     int n;
     cout<<"enter any number\n";
     cin>>n;
-    table(n);
+    table(n,10);
     return 0;
 
 }
