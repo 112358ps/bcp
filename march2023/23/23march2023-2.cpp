@@ -10,10 +10,10 @@ using namespace std;
 
 int main()
 {
-    int x;
+    int y
     cout<<"enter any number\n";
-    cin>>x;
-    cout<<(char) x<<"\n";
+    cin>>y;
+    cout<<(char) y<<"\n";
     return 0;
 
 }
