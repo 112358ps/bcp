@@ -9,49 +9,60 @@
  */
 #include<iostream>
 using namespace std;
-string palindrome(string x)
+bool palindrome(string a)
+{
+    if (a.length()<=1)
+    {
+        return false;
+    }
+    
+    bool r;
+    int end=0;
+    while (end<=a.length())
+    {
+        if (a[end]==a[a.length()-(end+1)])
+        {
+            end++;
+            r=true;
+        }
+        else
+        {
+            r=false;
+            break;
+        }
+    }
+    
+    return r;
+}
+string palindrometostar(string x)
 {
     string y,z;
-    int end=0,present=0,j=0,a=0;
+    int present=0,j=0;
     for (int i = 0; i <= x.length(); i++)
     {   
         if (x[i]==' '||(x[i]=='\0'))
         {
             present=i;
             y=x.substr(j,present-j);
-            end=y.length();
-            while(y[a]==y[y.length()-(a+1)])
+            int a=0;
+            if (palindrome(y))//palindrome(y)==true
             {
-                x[j]='*';
-                //cout<<j<<" ";
-                a++;
-                j++;
-                if(j==end-1)
+                for (int i = 0; i < y.length(); i++)
                 {
-                    break;
+                    x[j+i]='*';
                 }
             }
-            //cout<<endl;
             j=present+1;
-            //cout<<y<<"\n";
-            //cout<<(y=x.substr(j,present-j))<<"\n";
-            //cout<<"i="<<i<<",j="<<j<<",present="<<present<<"\n";
         }
-       
     }
-    for (int i = 0; i < x.length(); i++)
-    {
-        cout<<x[i];
-    }
-    cout<<endl;
-    return y;
+    return x;
 }
 int main()
 {
-    string n="bob has a radar plane";
-    // cout<<"enter required string1:\n";
-    // getline(cin,n);
-    palindrome(n);
+    string n;
+    cout<<"enter required string1:\n";
+    getline(cin,n);
+    cout<<palindrometostar(n)<<"\n";
      return 0;
 
 }
