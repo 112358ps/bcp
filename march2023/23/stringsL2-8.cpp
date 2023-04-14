@@ -11,34 +11,47 @@
 #include<iostream>
 using namespace std;
 
-string replace(string a)
+string replace(string a,string c,string d)
 {
-    string c="bat",d="snow";
     int f=(d.length()-c.length()),j=0;
-    for (int i = 0; i <= a.length(); i++)
+    for (int i = 0; i <= a.length();)
     {
-        while (a[i]==c[j])
+        int ii=i;
+        while (a[ii]==c[j]&&(j<c.length())&&(ii<a.length()))
         {
-            a[i]=d[j];
             j++;
+            ii++;
         }
+        if (j==c.length())
+        {
+            for (int iii = 0; iii < c.length(); iii++)
+            {
+                a[iii+i]=d[iii];
+            }
+            
+            a.insert(i+c.length(), 1, d[d.length()-1]);
+            i=i+d.length();
+        }
+        else
+        {
+            i=i+1;
+
+        }
+        j=0;
+        
     }
-    for (int i = 0; i <a.length()+f ; i++)
-    {
-        cout<<a[i];
-       
-    }
-    cout<<"\n";
     return a;
 }
 
 int main()
 {
-    string m="A batman with bat";
+    string m,n,o;
     
-    // cout<<"enter required string2:\n";
-    // getline(cin,m);
-    replace(m);
+    cout<<"enter required string:\n";
+    getline(cin,m);
+    cout<<"enter string word 'n'to replace it with another word 'o '\n";
+    cin>>n>>o;
+    cout<<replace(m,n,o)<<"\n";
     return 0;
 
 }
